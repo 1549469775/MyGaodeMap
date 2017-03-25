@@ -44,17 +44,24 @@
         android:textSize="12sp"/>
     <android.support.v7.widget.Toolbar
         android:id="@+id/app_bar"
-        android:elevation="3dp"
-        android:outlineProvider="bounds"
+        android:elevation="4dp"
         android:layout_width="match_parent"
-        android:background="#ffffff"
+        android:background="#fff"
         android:layout_height="55dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="蜂鸟速递"
-            android:layout_gravity="center"
-            android:textSize="23sp"/>
+        <!--android:outlineProvider="bounds"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="蜂鸟速递"
+                android:translationZ="6dp"
+                android:textColor="#000"
+                android:textSize="23sp"/>
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <TextView
         android:id="@+id/tv1"

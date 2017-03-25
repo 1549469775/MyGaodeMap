@@ -384,7 +384,7 @@ public class LoginActivity extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.start(client, viewAction);
 
-        ((LinearLayout)findViewById(R.id.pwd_re)).startAnimation(AnimationUtils.loadAnimation(this,R.anim.alpha));
+//        ((LinearLayout)findViewById(R.id.pwd_re)).startAnimation(AnimationUtils.loadAnimation(this,R.anim.alpha));
         ((Button)findViewById(R.id.login_confirm)).startAnimation(AnimationUtils.loadAnimation(this,R.anim.leftin));
         ((Button)findViewById(R.id.register_confirm)).startAnimation(AnimationUtils.loadAnimation(this,R.anim.rightin));
         ((LinearLayout)findViewById(R.id.login_phone_ly)).startAnimation(AnimationUtils.loadAnimation(this,R.anim.alpha));

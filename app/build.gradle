@@ -37,6 +37,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
     compile files('libs/AMap3DMap_4.1.3_AMapNavi_1.9.4_AMapSearch_4.0.0_AMapLocation_3.3.0_20170118.jar')
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile files('libs/gson-2.2.4.jar')

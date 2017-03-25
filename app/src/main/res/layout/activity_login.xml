@@ -3,10 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:src="@drawable/dg"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:src="@drawable/ddddg"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -18,11 +16,11 @@
             android:layout_marginTop="15dp"
             android:textSize="25sp"
             android:text="蜂鸟速递V1.0"
-            android:textColor="#18587e" />
+            android:textColor="#FFffffff" />
 
     <LinearLayout
         android:id="@+id/login_ly"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="170dp"
         android:layout_marginBottom="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,10 +33,10 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/bg_round_corners_white_area_gray_border"
+            android:background="@null"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <!--@drawable/bg_round_corners_white_area_gray_border-->
             <TextView
                 android:layout_width="103dp"
                 android:layout_height="wrap_content"
@@ -46,7 +44,7 @@
                 android:text="用户名"
                 android:textSize="18sp"
                 android:gravity="center"
-                android:textColor="#111111"
+                android:textColor="#fff"
                 android:drawablePadding="5dp"
                 android:drawableLeft="@drawable/ic_username" />
 
@@ -57,6 +55,8 @@
                 android:layout_marginTop="5dp"
                 android:background="@null"
                 android:hint="请输入用户名"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
                 android:textSize="13sp"
                 android:gravity="center|left"
                 android:maxLines="1"
@@ -72,7 +72,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:background="@drawable/bg_round_corners_white_area_gray_border"
+            android:background="@null"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -85,7 +85,7 @@
                 android:text="密码"
                 android:textSize="18sp"
                 android:gravity="center"
-                android:textColor="#111111"
+                android:textColor="#fff"
                 />
 
             <EditText
@@ -94,6 +94,8 @@
                 android:layout_height="50dp"
                 android:background="@null"
                 android:hint="请输入密码"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:textSize="13sp"
@@ -101,16 +103,18 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ccc"
+        android:layout_below="@+id/login_ly"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/pwd_re"
-        android:layout_alignStart="@+id/pwd_re">
+        android:orientation="horizontal">
         <ImageView
             android:id="@+id/facecamera"
-            android:src="@mipmap/camera"
+            android:src="@drawable/ic_camera"
             android:layout_width="68dp"
             android:layout_height="38dp"
             android:gravity="center"
@@ -122,58 +126,65 @@
             android:text="扫脸登录"
             android:textSize="18sp"
             android:gravity="center"
-            android:textColor="#111111"
+            android:textColor="#fff"
             />
     </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:visibility="invisible"-->
+        <!--android:id="@+id/pwd_re"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@id/login_ly"-->
+        <!--&gt;-->
+        <!--<CheckBox-->
+            <!--android:text="记住密码"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp" />-->
+        <!--<CheckBox-->
+            <!--android:text="自动登陆"-->
+            <!--android:layout_gravity="end"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp" />-->
+    <!--</LinearLayout>-->
     <LinearLayout
-        android:id="@+id/pwd_re"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        android:layout_below="@id/login_ly"
-        >
-        <CheckBox
-            android:text="记住密码"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp" />
-        <CheckBox
-            android:text="自动登陆"
-            android:layout_gravity="end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/login_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="center"
+            android:text="Sign up"
+            android:textColor="@color/font_white"
+            android:textSize="18sp" />
+        <!--android:background="@android:color/transparent"-->
+        <!--android:clickable="true"-->
+        <!--android:foreground="?attr/selectableItemBackground"-->
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/register_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="center"
+            android:text="Sign up"
+            android:textColor="@color/font_white"
+            android:textSize="18sp" />
     </LinearLayout>
-    <Button
-        android:id="@+id/login_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/pwd_re"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/bg_blue_button"
-        android:gravity="center"
-        android:text="登录"
-        android:textColor="@color/font_white"
-        android:textSize="18sp" />
-    <Button
-        android:id="@+id/register_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/login_confirm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_blue_button"
-        android:gravity="center"
-        android:text="注册"
-        android:textColor="@color/font_white"
-        android:textSize="18sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -186,11 +197,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="江西师范大学"
+            android:textColor="@color/font_white"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Copyright@2007-2017 jxnu"
+            android:textColor="@color/font_white"
             />
     </LinearLayout>
 
