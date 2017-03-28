@@ -1,5 +1,6 @@
 package com.example.administrator.mygaodemap;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -50,7 +51,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TicketActivity extends AppCompatActivity {
+public class TicketActivity extends Activity {
 
     private PullToRefreshListView listView;
     private IBackService iBackService;

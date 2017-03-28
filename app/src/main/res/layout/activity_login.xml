@@ -20,7 +20,7 @@
 
     <LinearLayout
         android:id="@+id/login_ly"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
             android:layout_height="50dp"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:gravity="center"
-            android:text="Sign up"
+            android:text="Sign in"
             android:textColor="@color/font_white"
             android:textSize="18sp" />
         <!--android:background="@android:color/transparent"-->

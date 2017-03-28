@@ -1,6 +1,7 @@
 package com.example.administrator.mygaodemap;
 
 import android.animation.Animator;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -92,7 +93,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity implements LocationSource,AMapLocationListener, AMap.OnMapClickListener{
+public class MainActivity extends Activity implements LocationSource,AMapLocationListener, AMap.OnMapClickListener{
 
     MapView mMapView = null;
     AMap aMap;
@@ -488,16 +489,17 @@ public class MainActivity extends AppCompatActivity implements LocationSource,AM
         final AlertDialog dialog = new AlertDialog.Builder(this).create();
         ArrayAdapter<String> adapter;
         Window win = dialog.getWindow();
-        win.getDecorView().setPadding(0, 0, 0, 0);
+//        win.getDecorView().setPadding(0, 0, 0, 0);
         WindowManager.LayoutParams lp = win.getAttributes();
-        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+//        lp.alpha=0.8f;
         win.setAttributes(lp);
 
-        View view=LayoutInflater.from(this).inflate(R.layout.layout_ticket, null);
-
+        View view=LayoutInflater.from(this).inflate(R.layout.layout_ticket, (ViewGroup) findViewById(R.id.rip));
         dialog.setView(view);
         dialog.show();
+
         final EditText weight=(EditText)dialog.findViewById(R.id.weight);
 
         final EditText beizhu=(EditText)dialog.findViewById(R.id.beizhu);

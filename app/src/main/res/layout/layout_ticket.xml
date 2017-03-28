@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
+    android:layout_height="wrap_content"
     android:id="@+id/rip"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:layout_gravity="center"
     android:orientation="vertical">
+    <!--android:theme="@style/ParkingTheme"-->
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="45sp"
-        android:background="#FAFAFA"
-        android:layout_marginLeft="2.5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="2.5dp"
         android:orientation="horizontal"
-        android:layout_marginTop="3dp"
-        >
+        android:layout_marginTop="3dp">
+        <!--android:background="#FAFAFA"-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="start|center"
             android:layout_gravity="center"
             android:text="填写订单"
-            android:textSize="20sp"/>
+            android:textColor="#000"
+            android:textSize="18sp"/>
         </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ispersonal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="#FAFAFA"
             android:layout_marginBottom="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -45,20 +47,22 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="请选择用户类型"
-                android:textSize="18sp"
-                android:textColor="#111111"
+                android:textSize="12sp"
+                android:textColor="#000"
                 />
+            <!--android:textColor="#111111"-->
             <TextView android:id="@+id/spinnerText"
-                android:layout_width="131dp"
-                android:layout_height="38dp"
-                android:background="@drawable/bg_round_corners_white_area_gray_border"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
                 android:maxLines="1"
+                android:textColor="#000"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:text="个人"></TextView>
             <Spinner android:id="@+id/Spi_ispersonal"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="#000"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"></Spinner>
         </LinearLayout>
         </LinearLayout>
@@ -75,31 +79,30 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="#FAFAFA"
             android:layout_marginBottom="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="发货人"
-
-                android:textSize="18sp"
-                android:textColor="#111111"
+                android:textSize="12sp"
+                android:textColor="#000"
                 />
 
             <EditText
                 android:id="@+id/sender"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"
                 android:maxLines="1"
+                android:hint="姓名"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,30 +110,30 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="#FAFAFA"
             android:layout_marginBottom="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="收货人"
-                android:textSize="18sp"
-                android:textColor="#111111"
+                android:textSize="12sp"
+                android:textColor="#000"
                 />
 
             <EditText
                 android:id="@+id/reciver"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"
                 android:maxLines="1"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:hint="姓名"
+                android:textSize="12sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,31 +141,30 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="#FAFAFA"
             android:layout_marginBottom="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="期望时间"
 
-                android:textSize="18sp"
-                android:textColor="#111111"
+                android:textSize="12sp"
+                android:textColor="#000"
                 />
 
             <EditText
                 android:id="@+id/time_"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"
                 android:maxLines="1"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
 
@@ -171,19 +173,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="2dp"
             android:gravity="center_vertical"
-            android:background="#FAFAFA"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="物品重量"
-                android:background="#FAFAFA"
-                android:textSize="18sp"
-                android:textColor="#111111"
+                android:textSize="12sp"
+                android:textColor="#000"
                 />
 
             <LinearLayout
@@ -194,24 +193,23 @@
                     android:id="@+id/weight"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="38dp"
+                    android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_round_corners_white_area_gray_border"
                     android:hint="请输入物品重量"
                     android:maxLines="1"
                     android:padding="5dp"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:inputType="number" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="kg"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="#FAFAFA"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
                     android:textSize="18sp"
-                    android:textColor="#787878" />
+                    android:textColor="#000" />
             </LinearLayout>
         </LinearLayout>
 
@@ -220,33 +218,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:background="#FAFAFA"
             android:layout_marginRight="10dp"
             android:layout_marginTop="2dp"
             android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="电话"
-                android:background="#FAFAFA"
-                android:textSize="18sp"
-                android:textColor="#111111"
-                />
+                android:textColor="#000"
+                android:textSize="12sp" />
 
             <EditText
                 android:id="@+id/telephone"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"
                 android:hint="请输入电话号码"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:inputType="number" />
         </LinearLayout>
 
@@ -255,7 +251,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#FAFAFA"
             android:layout_marginTop="2dp"
             android:gravity="center_vertical"
             android:orientation="vertical">
@@ -263,21 +258,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="备注"
-                android:background="#FAFAFA"
                 android:textSize="18sp"
-                android:textColor="#111111"
+                android:textColor="#000"
                 />
 
             <EditText
                 android:id="@+id/beizhu"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/bg_round_corners_white_area_gray_border"
-                android:hint=""
+                android:hint="您需要提醒我们什么"
                 android:gravity="top"
                 android:padding="10dp"
                 android:textSize="18sp"
@@ -286,7 +280,8 @@
 
         <LinearLayout
             android:id="@+id/button_ly"
-            android:layout_width="match_parent"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
@@ -298,11 +293,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_blue_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:gravity="center"
-                android:text="提交订单"
-                android:textColor="@color/font_white"
-                android:textSize="18sp" />
+                android:text="SUBMIT"
+                android:textColor="#000"
+                android:textSize="15sp" />
             <Button
                 android:id="@+id/cancel_confirm"
                 android:layout_width="match_parent"
@@ -312,11 +307,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_blue_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:gravity="center"
-                android:text="取消订单"
-                android:textColor="@color/font_white"
-                android:textSize="18sp" />
+                android:text="CECAL"
+                android:textColor="#000"
+                android:textSize="15sp" />
         </LinearLayout>
 
     </LinearLayout>

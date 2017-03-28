@@ -1,5 +1,6 @@
 package com.example.administrator.mygaodemap.util;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -58,7 +59,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class PlaneActivity extends AppCompatActivity implements LocationSource,AMapLocationListener {
+public class PlaneActivity extends Activity implements LocationSource,AMapLocationListener {
     MapView mMapView = null;
     private int twoToExit=0;
     AMap aMap;

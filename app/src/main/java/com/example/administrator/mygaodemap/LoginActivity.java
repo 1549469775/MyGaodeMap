@@ -1,6 +1,7 @@
 package com.example.administrator.mygaodemap;
 
 import android.animation.Animator;
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -49,7 +50,7 @@ import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Random;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
     Button login;
     EditText userID;
     ImageView camera;
